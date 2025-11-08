@@ -412,7 +412,6 @@ export default function SettingsScreen() {
                         item.type === "danger" && styles.dangerItem,
                       ]}
                       onPress={item.onPress}
-                      disabled={item.type === "info"}
                     >
                       <View style={styles.settingLeft}>
                         <View
@@ -451,14 +450,11 @@ export default function SettingsScreen() {
                         )}
                         {item.type === "action" && (
                           <View style={styles.actionRight}>
-                            {item.value && (
+                            {'value' in item && item.value && (
                               <Text style={styles.settingValue}>{item.value}</Text>
                             )}
                             <ChevronRight size={20} color="#9CA3AF" />
                           </View>
-                        )}
-                        {item.type === "info" && (
-                          <Text style={styles.settingValue}>{item.value}</Text>
                         )}
                         {item.type === "danger" && (
                           <ChevronRight size={20} color="#EF4444" />

@@ -23,7 +23,7 @@ export default function AchievementsScreen() {
       title: "Quick Starter",
       description: "Complete your first lesson",
       icon: Zap,
-      color: ["#FDE68A", "#F59E0B"],
+      color: ["#FDE68A", "#F59E0B"] as const,
       earned: completedLessons >= 1,
     },
     {
@@ -31,7 +31,7 @@ export default function AchievementsScreen() {
       title: "Dedicated Learner",
       description: "Complete 5 lessons",
       icon: Target,
-      color: ["#A78BFA", "#7C3AED"],
+      color: ["#A78BFA", "#7C3AED"] as const,
       earned: completedLessons >= 5,
     },
     {
@@ -39,7 +39,7 @@ export default function AchievementsScreen() {
       title: "Marketing Expert",
       description: "Complete 10 lessons",
       icon: Trophy,
-      color: ["#FCA5A5", "#EF4444"],
+      color: ["#FCA5A5", "#EF4444"] as const,
       earned: completedLessons >= 10,
     },
     {
@@ -47,7 +47,7 @@ export default function AchievementsScreen() {
       title: "Digital Master",
       description: "Complete all modules",
       icon: Award,
-      color: ["#6EE7B7", "#10B981"],
+      color: ["#6EE7B7", "#10B981"] as const,
       earned: overallProgress === 100,
     },
   ];
